@@ -1,130 +1,346 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Трава Beauty Bar - Получите скидку 500 руб!</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+body {
+       font-family: sans-serif;
+       position: relative;
+       margin: 0 auto;
+       left: 0; 
+       right: 0; 
+       max-width: 450px;       
+} 
+       
+  .nav1{
+      position: relative;
+      background: url("img/nav1.png") transparent;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      height: 60px;
+      width: 100%;
+      margin: 0 auto;
+      left: 0; 
+      right: 0; 
+      max-width: 450px;
+      box-shadow: 0px 1px 4px 2px rgba(66, 68, 90, 0.18);
+         
+ }
+ 
+   .nav2{
+      z-index:999999;
+      position: fixed;
+      background: url("img/nav2.png") transparent;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      height: 110px;
+      width: 100%;
+      bottom: 0; 
+      left: 0; 
+      right: 0; 
+      margin: 0 auto;
+      padding-top: 5px;
+      max-width: 450px;
+ }
+ 
+.foto{
+      z-index: 1;
+      background: url('img/index1.png');
+      background-repeat: no-repeat;
+      background-size: 100%;     
+      left: 0; 
+      right: 0;            
+      margin: 0 auto;
+      top: 15px;
+      position: relative;
+      max-width: 430px;           
+}
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background: #7a9254; /* Основной цвет салона как фон всей страницы */
-            min-height: 100vh; /* Заполняем весь экран по высоте */
-            width: 100%; /* Заполняем весь экран по ширине */
+.radio-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width:;
+}
+h1 {
+	margin-bottom: 20px;
+}
+.radio-item [type="radio"] {
+	display: none;
+}
+.radio-item + .radio-item {
+	margin-top: 15px;
+}
+.radio-item label {
+	display: block;
+	padding: 8px 0px;
+	background: transparent;
+	border: 2px solid #E95D05;
+	border-radius: 20px;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: 400;
+	max-width: 430px;
+	color: #00A39E;
+	margin: 8px auto;
+	top:210px;
+	position: relative;
+	
+}
+.radio-item label:after,
+.radio-item label:before {
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+}
+.radio-item label:after {
+	height: 20px;
+	width: 20px;
+	border: 1px solid #555555;
+	left: 9px;
+	top: calc(50% - 11px);
+}
+.radio-item label:before {
+	background: #00A39E;
+	height: 17px;
+	width: 17px;
+	left: 11.2px;
+	top: calc(50% - 9.8px);
+	transform: scale(5);
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.4s ease-in-out 0s;
+}
+.radio-item [type="radio"]:checked ~ label {
+	border-color: #555555;
+}
+.radio-item [type="radio"]:checked ~ label::before {
+	opacity: 1;
+	visibility: visible;
+	transform: scale(1);
+	margin-top: 0.9px;
+}
+
+.button{
+      z-index: 1;
+      background: #E95D05; 
+      margin-top: 16px; 
+      height: 45px; 
+      max-width: 100%; 
+      color: #fff; 
+      border-radius: 50px; 
+      border: 1px solid #00A39E;
+      width: 72%;      
+}
+
+
+.three {
+    transition: all 0.2s;
+    transition-timing-function:cubic-bezier(2.2, 2, 3, 2);
+}
+
+.three:hover {
+    background: #00A39E; 
+    color: white;
+    border: none;
+    opacity: 0.3;
+    transform:scale(1.01,1.01);
+    box-shadow: inset 0px 0px 9px -2px rgba(66, 68, 90, 1);
+}
+
+    .form-log{
+        box-sizing: border-box; 
+        height: 40px; 
+        width: 72%;        
+        border:none;
+        border-bottom: 1.5px solid #E95D05; 
+        border-image: initial; 
+        background-color: transparent;  
+        background: url("img/62.");
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 21%;     
+        font-family: 'Nunito', sans-serif; 
+        font-weight: 600; 
+        font-size: 16px; 
+        color: #00000099;              
+        outline: none; 
+        padding-left: 15%;
+        margin: auto;
+        display: block;
+        
+    }
+    
+  .lbl{
+        
+        font-size: 14px;
+        color: #000000cc;
+        margin-left: 13%;
+        font-weight: 800;
+  }
+  
+  ::placeholder{
+        font-size: 13px;
+        font-weight: 400;
+        
+  }
+  
+  .process1 {
+            width: 100%;
+            height: 100%;
             display: flex;
-            flex-direction: column; /* Элементы располагаются вертикально */
-            justify-content: center; /* Центрируем по вертикали для полного заполнения экрана */
-            align-items: center; /* Центрируем по горизонтали */
-            color: white;
-            overflow-x: hidden; /* Убираем горизонтальную прокрутку */
-        }
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            position: fixed;
+            padding-top: 300px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 999999999;
+            
+      
+}
+.loading {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20%;
+    margin-top: 0px;
+}
+.loading img {
+    width: 190px;
+    border-radius: 10px;
+}
 
-        .container {
-            width: 100%; /* Занимаем всю ширину экрана */
-            max-width: 90%; /* Ограничение для больших экранов, но не слишком строгое */
-            padding: 20px; /* Минимальные отступы */
-            text-align: center;
-            background: rgba(255, 255, 255, 0.1); /* Лёгкий белый фон для контраста с основным фоном */
-            border-radius: 15px; /* Скругление для современного вида */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Тень для 3D-эффекта */
-            animation: fadeIn 1.5s ease-in-out;
-        }
+welalxcome {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: url('img/welcome.png') no-repeat center center;
+  background-position: 100% 100%;
+  background-size: 100% 100%;
+  z-index: 10000;
+  background-color: #ffffff;
 
-        .logo {
-            width: 100%; /* Логотип занимает всю доступную ширину */
-            max-width: 300px; /* Ограничение для больших экранов */
-            margin-bottom: 30px; /* Отступ снизу для логотипа */
-            border-radius: 50%; /* Делаем логотип круглым */
-            object-fit: cover; /* Обрезаем изображение, чтобы оно помещалось в круг */
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3), 0 0 0 10px rgba(255, 255, 255, 0.2); /* 3D-эффект с обводкой */
-            transform: translateZ(10px); /* Лёгкий 3D-эффект */
-            transition: transform 0.3s, box-shadow 0.3s; /* Анимация при наведении */
-        }
+}
+welalxcome img {
+        width:100%;
+    height: 700px;
+    margin-top: -55px;
+    
+}
+chsalxcome {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+ 
+ .animated {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	 -webkit-animation-name: bounceIn; 
+    animation-name: bounceIn; 
+}
 
-        .logo:hover {
-            transform: translateZ(15px); /* Увеличение 3D-эффекта при наведении */
-            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4), 0 0 0 12px rgba(255, 255, 255, 0.3);
-        }
+@-webkit-keyframes bounceIn { 
+    0% { 
+        opacity: 1; 
+        -webkit-transform: scale(0); 
+    } 
 
-        h1 {
-            font-size: 2.8rem; /* Очень крупный заголовок для трендового вида */
-            margin: 20px 0;
-            color: #ffffff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
+    50% { 
+        opacity: 1; 
+        -webkit-transform: scale(0); 
+    } 
 
-        p {
-            font-size: 1.6rem; /* Крупный текст, читаемый на всех устройствах */
-            margin-bottom: 40px;
-            color: #f0f0f0;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-        }
+    70% { 
+        -webkit-transform: scale(0); 
+    } 
 
-        .btn {
-            display: inline-block;
-            padding: 18px 50px; /* Большие размеры для кнопки, как в примерах */
-            background: #7a9254; /* Цвет салона */
-            color: white;
-            text-decoration: none;
-            font-size: 2rem; /* Крупная кнопка */
-            border-radius: 15px; /* Больший радиус для современного вида */
-            transition: 0.3s;
-            border: 3px solid #ffffff;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            margin-bottom: 20px; /* Отступ снизу */
-        }
+    100% { 
+         -webkit-transform: scale(0); 
+    } 
+} 
 
-        .btn:hover {
-            background: #668145; /* Темнее оттенок цвета салона */
-            transform: translateY(-4px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
+@keyframes bounceIn { 
+    0% { 
+        opacity: 1; 
+        transform: scale(.1); 
+    } 
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    50% { 
+        opacity: 1; 
+        transform: scale(.5); 
+    } 
 
-        /* Адаптивность для мобильных устройств */
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-                max-width: 100%; /* Занимаем всю ширину на мобильных */
-            }
+    70% { 
+        transform: scale(1); 
+    } 
 
-            .logo {
-                max-width: 200px; /* Меньший логотип на мобильных */
-                margin-bottom: 20px;
-            }
+    100% { 
+        transform: scale(1); 
+    } 
+} 
 
-            h1 {
-                font-size: 2.2rem; /* Уменьшаем заголовок на мобильных */
-            }
+.naik {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-timing-function: ease-in;
+	animation-timing-function: ease-in;
+	-webkit-animation-name: bounceOutUp; 
+    animation-name: bounceOutUp; 
+}
 
-            p {
-                font-size: 1.3rem; /* Уменьшаем текст на мобильных */
-            }
+@-webkit-keyframes bounceOutUp { 
+    0% { 
+        -webkit-transform: translateY(0); 
+    } 
+    20% { 
+        opacity: 1; 
+        -webkit-transform: translateY(20px); 
+    } 
+    100% { 
+        opacity: 1; 
+        -webkit-transform: translateY(-200px); 
+    } 
+} 
+@keyframes bounceOutUp { 
+    0% { 
+        transform: translateY(0); 
+    } 
+    20% { 
+        opacity: 1; 
+        transform: translateY(20px); 
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateY(-500px); 
+    } 
+} 
+.bounceOutUp { 
+    
+}
 
-            .btn {
-                padding: 14px 40px;
-                font-size: 1.6rem; /* Уменьшаем кнопку на мобильных */
-                border: 2px solid #ffffff;
-                margin-bottom: 15px;
-            }
-        }
-    </style>
-</head>
+.box{
+    position: relative;
+    background: none;
+    margin-bottom: 130px;
+}
+ </style>
 <body>
     <div class="container">
         <img src="https://i.ibb.co.com/xK5FWrjw/IMG-20250925-100624.png" alt="Trava Beauty Bar background" class="background"> <!-- Логотип с правильной ссылкой -->
